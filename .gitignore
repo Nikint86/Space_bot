@@ -1,0 +1,7 @@
+image
+.venv
+.ruff_cache
+.idea
+.git
+.gitattributes
+.env
