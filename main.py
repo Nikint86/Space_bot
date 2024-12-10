@@ -88,20 +88,6 @@ def more_ep_urls():
             file.write(more_epic_urlll.content)
 
 
-def nasa_epic():
-    payload = {"api_key": API_KEY
-
-    }
-
-    nasa_img_epic = "https://api.nasa.gov/EPIC/archive/natural/2024/12/08/png/epic_1b_20241208010437.png"
-    epic_img_response = requests.get(nasa_img_epic, params = payload)
-    epic_img_response.raise_for_status()
-
-    filename = IMAGE_DIRECTORY / "epic.jpg"
-    with open(filename, 'wb') as file:
-        file.write(epic_img_response.content)
-
-
 def find_jpeg():
     url = input("")
     splited_url = os.path.splitext(url)
