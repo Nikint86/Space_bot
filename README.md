@@ -4,6 +4,32 @@
 
 По умолчанию задержка 3 часа.
 
+### Для cкрипта необходимо:
+
+`$ python -m pip install random`
+
+`$ python -m pip install os`
+
+`$ python -m pip install dotenv`
+
+`$ python -m pip install time`
+
+Версия Python 3.12
+
+### Переменные окружения:
+
+`token = os.getenv("TG_BOT_TOKEN")`
+
+Токен зарегистрированного бота
+
+`chat_id = os.getenv("GROUP_TG_CHAT_ID")`
+
+Чат ID вашей группы или пользователя, которому Вы хотите отправить сообщение.
+
+`TIME = int(os.getenv("TIME_SEND"))`
+
+Задержка, с которой бот отправляет сообщение.
+
 ### Как поменять задержку?
 
 Задержку можно изменить при помощи файла **time.env**.
@@ -16,13 +42,36 @@
 
 Строка с использованием **time.env** в **time_img_send**.
 
+### Как запустить?
+
+`python time_img_send`
+
+### Как проверить?
+
+Бот должен отправить картинку указанную в директории в чат, указанный в `chat_id`
+
 ---
 
 ## nasa_apod
 
 Скачивает картинки дня с сайта NASA в директорию указанную в `IMAGE_DIRECTORY`
 
+### Для cкрипта необходимо:
+
+`$ python -m pip install requests`
+
+`$ python -m pip install os`
+
+`$ python -m pip install pathlib`
+
+`$ python -m pip install dotenv`
+
+Версия Python 3.12
+
+### Директория
 `IMAGE_DIRECTORY = Path("Ваша директория")`
+
+### Переменные окружения:
 
 Для запуска необходим API Ключ, который находится на сайте NASA.
 
@@ -32,11 +81,27 @@
 
 `API_KEY = "Ваш API Ключ с сайта NASA"`
 
+### Как запустить?
+
+`python nasa_apod`
+
+### Как проверить?
+
+Скачивает фотографии дня с сайта NASA в директорию указанную в IMAGE_DIRECTORY.
+
 ---
 
 ## fetch_spacex_images
 
 Скачивает фотографию с сайта Wikimedia.
+
+### Для cкрипта необходимо:
+
+`$ python -m pip install requests`
+
+`$ python -m pip install pathlib`
+
+Версия Python 3.12
 
 Для работы необходима ваша директория.
 
@@ -46,11 +111,31 @@
 
 `download_page = "Ваша ссылка"`
 
+### Как запустить?
+
+`python fetch_spacex_images`
+
+### Как проверить?
+
+Скрипт скачает фотографию с сайта Wikimedia в директорию, указанную в `IMAGE_DIRECTORY`
+
 ---
 
 ## download_epic
 
 Скачивает EPIC фото с сайта NASA.
+
+### Для cкрипта необходимо:
+
+`$ python -m pip install requests`
+
+`$ python -m pip install os`
+
+`$ python -m pip install pathlib`
+
+`$ python -m pip install dotenv`
+
+Версия Python 3.12
 
 Для запуска необходим API Ключ, который находится на сайте NASA.
 
@@ -64,10 +149,32 @@
 
 `IMAGE_DIRECTORY = Path("Ваша директория")`
 
+### Как запустить?
+
+`python download_epic`
+
+### Как проверить?
+
+Скачает EPIC фото с сайта NASA в директорию, указанную в IMAGE_DIRECTORY.
+
 ---
 
 ## main.py
 
-Находит разрешение файла,указанного в url.
+Находит разрешение файла указанного в url.
 
-`url = input("")`
+### Для скрипта необходимо:
+
+`$ python -m pip install os`
+
+`$ python -m pip install argparse`
+
+### Как указать ссылку на файл?
+
+`python main.py Ваша сслыка`
+
+### Как проверить?
+
+Укажет разрешение файла.
+
+Пример: `.json` или `.txt`

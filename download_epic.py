@@ -7,20 +7,20 @@ from dotenv import load_dotenv
 IMAGE_DIRECTORY = Path("C:/Python/image")
 IMAGE_DIRECTORY.mkdir(parents=True, exist_ok=True)
 
-load_dotenv()
 
-API_KEY = os.getenv("API_KEY")
+def main():
+    load_dotenv()
+    api_key = os.getenv("NASA_API_KEY")
 
-
-def more_ep_urls():
-    payload = {"api_key": API_KEY
+    payload = {"api_key": api_key
 
                 }
     urls = "https://api.nasa.gov/EPIC/api/natural/images"
     urls_response = requests.get(urls, params = payload)
     urls_response.raise_for_status()
-    urls_json = urls_response.json()
-    urls_textt = tuple(urls_json)
+    urls_open = urls_response.json()
+    urls_textt = tuple(urls_open)
+
 
     for parsed in urls_textt:
         new_urls = parsed["image"]
@@ -32,4 +32,5 @@ def more_ep_urls():
         with open(filename, 'wb') as file:
             file.write(more_epic_urlll.content)
 
-more_ep_urls()
+if __name__ == '__main__':
+    main()
