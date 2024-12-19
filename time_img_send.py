@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from time import sleep
 
 
-DOCUMENT = os.listdir("C:/Python/image/")
+DOCUMENT = os.listdir(os.path.join("C:","Python","image"))
 
 
 def main():
@@ -17,9 +17,8 @@ def main():
         random.shuffle(DOCUMENT)
         for rand_choice in DOCUMENT:
             bot = telegram.Bot(token=token)
-            with open(f'C:/Python/image/{rand_choice}', 'rb') as document_file:
+            with open(os.path.join("C:", "Python", "image" f"{rand_choice}", "rb")) as document_file:
                 bot.send_document(chat_id=chat_id, document=document_file)
             sleep(time)
 
-if __name__ == "__main__":
-    main()
+main()
