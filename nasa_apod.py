@@ -20,7 +20,7 @@ def main():
     nasa_response.raise_for_status()
     images_data = nasa_response.json()
 
-    for index, item in enumerate(images_data):
+    for index, item in enumerate(images_data, start=1):
         image_nasa_url = item.get("url")
 
         if image_nasa_url:
