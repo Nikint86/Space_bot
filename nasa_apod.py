@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-IMAGE_DIRECTORY = Path("C:/Python/image")
+IMAGE_DIRECTORY = Path(os.path.join("C:","Python","image"))
 IMAGE_DIRECTORY.mkdir(parents=True, exist_ok=True)
 
 

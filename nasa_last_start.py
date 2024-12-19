@@ -1,8 +1,8 @@
 import requests
 from pathlib import Path
+import os
 
-
-IMAGE_DIRECTORY = Path("C:/Python/image")
+IMAGE_DIRECTORY = Path(os.path.join("C:","Python","image"))
 IMAGE_DIRECTORY.mkdir(parents=True, exist_ok=True)
 
 
@@ -25,4 +25,5 @@ def main():
         with open(filename, 'wb') as file:
          file.write(response.content)
 
-main()
+if __name__ == '__main__':
+    main()

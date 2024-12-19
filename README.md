@@ -6,7 +6,13 @@
 
 ### Для cкрипта необходимо:
 
+`$ python -m pip install random`
+
+`$ python -m pip install os`
+
 `$ python -m pip install dotenv`
+
+`$ python -m pip install time`
 
 Версия Python 3.12
 
@@ -54,6 +60,10 @@
 
 `$ python -m pip install requests`
 
+`$ python -m pip install os`
+
+`$ python -m pip install pathlib`
+
 `$ python -m pip install dotenv`
 
 Версия Python 3.12
@@ -89,6 +99,8 @@
 
 `$ python -m pip install requests`
 
+`$ python -m pip install pathlib`
+
 Версия Python 3.12
 
 Для работы необходима ваша директория.
@@ -116,6 +128,10 @@
 ### Для cкрипта необходимо:
 
 `$ python -m pip install requests`
+
+`$ python -m pip install os`
+
+`$ python -m pip install pathlib`
 
 `$ python -m pip install dotenv`
 
@@ -148,6 +164,8 @@
 Находит разрешение файла указанного в url.
 
 ### Для скрипта необходимо:
+
+`$ python -m pip install os`
 
 `$ python -m pip install argparse`
 
