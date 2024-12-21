@@ -6,7 +6,7 @@
 
 ### Для cкрипта необходимо:
 
-`$ python -m pip install dotenv`
+`$ python -m pip install dotenv==1.0.1`
 
 Версия Python 3.12
 
@@ -52,9 +52,9 @@
 
 ### Для cкрипта необходимо:
 
-`$ python -m pip install requests`
+`$ python -m pip install requests==2.32.3`
 
-`$ python -m pip install pathlib`
+`$ python -m pip install pathlib==1.0.1`
 
 Версия Python 3.12
 
@@ -87,9 +87,9 @@
 
 ### Для cкрипта необходимо:
 
-`$ python -m pip install requests`
+`$ python -m pip install requests==2.32.3`
 
-`$ python -m pip install pathlib`
+`$ python -m pip install pathlib==1.0.1`
 
 Версия Python 3.12
 
@@ -117,9 +117,9 @@
 
 ### Для cкрипта необходимо:
 
-`$ python -m pip install requests`
+`$ python -m pip install requests==2.32.3`
 
-`$ python -m pip install pathlib`
+`$ python -m pip install pathlib==1.0.1`
 
 Версия Python 3.12
 
@@ -151,7 +151,7 @@
 
 ### Для скрипта необходимо:
 
-`$ python -m pip install argparse`
+`$ python -m pip install argparse=1.4.0`
 
 ### Как указать ссылку на файл?
 
