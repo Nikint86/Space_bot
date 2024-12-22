@@ -1,23 +1,25 @@
-import requests
 from pathlib import Path
-import os
+import argparse
+from save_tool import download_and_save_image
 
-IMAGE_DIRECTORY = Path(os.path.join("C:","Python","image"))
-IMAGE_DIRECTORY.mkdir(parents=True, exist_ok=True)
 
 def open_wikipedia():
     wikipedia_page = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
     return wikipedia_page
 
-def download_image(wikipedia_page, filename):
-    response = requests.get(wikipedia_page)
-    response.raise_for_status()
-    with open(filename, 'wb') as file:
-        file.write(response.content)
 
-def main(wikipedia_page):
-    filename = IMAGE_DIRECTORY / "hubble.jpeg"
-    download_image(wikipedia_page, filename)
+def main(image_directory):
+    image_directory.mkdir(parents=True, exist_ok=True)
+    filename = image_directory / "hubble.jpeg"
+    download_and_save_image(open_wikipedia(), 0, image_directory)
+
 
 if __name__ == '__main__':
-    main(wikipedia_page=open_wikipedia())
+    parser = argparse.ArgumentParser(description="Скачать фото с сайта Wikipedia")
+    parser.add_argument('directory', type=str, help='Директория для сохранения фото.')
+    args = parser.parse_args()
+
+    image_directory = Path(args.directory)
+    main(image_directory)
+
+

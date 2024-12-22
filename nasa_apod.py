@@ -1,27 +1,25 @@
-import requests
 import os
+import requests
 from pathlib import Path
 from dotenv import load_dotenv
-
-IMAGE_DIRECTORY = Path(os.path.join("C:", "Python", "image"))
-IMAGE_DIRECTORY.mkdir(parents=True, exist_ok=True)
-
-
-def download_and_save_image(image_url, index):
-    image_response = requests.get(image_url)
-    image_response.raise_for_status()
-    filename = IMAGE_DIRECTORY / f"spacex{index + 1}.jpg"
-    with open(filename, 'wb') as file:
-        file.write(image_response.content)
-    print(f"Изображение {index + 1} успешно загружено: {filename}")
+import argparse
+from save_tool import download_and_save_image  # Импорт новой функции
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Скачать NASA фото")
+    parser.add_argument('directory', type=str, help='Директория для сохранения фото.')
+    args = parser.parse_args()
+
+    image_directory = Path(args.directory)
+    image_directory.mkdir(parents=True, exist_ok=True)
+
     load_dotenv()
     api_key = os.getenv("NASA_API_KEY")
     num_images = 30
     payload = {"api_key": api_key, "count": f"{num_images}"}
     nasa_urls = "https://api.nasa.gov/planetary/apod"
+
     nasa_response = requests.get(nasa_urls, params=payload)
     nasa_response.raise_for_status()
     images_data = nasa_response.json()
@@ -30,8 +28,9 @@ def main():
         image_nasa_url = item.get("url")
         if image_nasa_url:
             print(f"Загружается изображение {index + 1}: {image_nasa_url}")
-            download_and_save_image(image_nasa_url, index)
+            download_and_save_image(image_nasa_url, index, image_directory)
 
 
 if __name__ == '__main__':
     main()
+
