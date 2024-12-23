@@ -7,14 +7,14 @@ import argparse
 
 def main(image_directory):
     load_dotenv()
-    token = os.getenv("TG_BOT_TOKEN")
-    chat_id = os.getenv("GROUP_TG_CHAT_ID")
-    time = int(os.getenv("BOT_TIMER"))
-    DOCUMENT = os.listdir(image_directory)
+    token = os.environ["TG_BOT_TOKEN"]
+    chat_id = os.environ["GROUP_TG_CHAT_ID"]
+    time = int(os.environ["BOT_TIMER"])
+    open_directory = os.listdir(image_directory)
 
     while True:
-        random.shuffle(DOCUMENT)
-        for rand_choice in DOCUMENT:
+        random.shuffle(open_directory)
+        for rand_choice in open_directory:
             bot = telegram.Bot(token=token)
             document_path = os.path.join(image_directory, rand_choice)
             with open(document_path, "rb") as document_file:
