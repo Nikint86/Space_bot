@@ -15,7 +15,7 @@ def main():
     image_directory.mkdir(parents=True, exist_ok=True)
 
     load_dotenv()
-    api_key = os.getenv("NASA_API_KEY")
+    api_key = os.environ["NASA_API_KEY"]
     num_images = 30
     payload = {"api_key": api_key, "count": f"{num_images}"}
     nasa_urls = "https://api.nasa.gov/planetary/apod"

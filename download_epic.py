@@ -14,7 +14,7 @@ def main():
     image_directory = Path(args.directory)
     image_directory.mkdir(parents=True, exist_ok=True)
     load_dotenv()
-    api_key = os.getenv("NASA_API_KEY")
+    api_key = os.environ["NASA_API_KEY"]
     payload = {"api_key": api_key}
     urls = "https://api.nasa.gov/EPIC/api/natural/images"
 
