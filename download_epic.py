@@ -23,8 +23,8 @@ def main():
     urls_open = urls_response.json()
 
     for index, parsed in enumerate(urls_open, start=1):
-        new_urls = parsed["image"]
-        more_epic_url = f"https://api.nasa.gov/EPIC/archive/natural/2024/12/08/png/{new_urls}.png"
+        new_url = parsed["image"]
+        more_epic_url = f"https://api.nasa.gov/EPIC/archive/natural/2024/12/08/png/{new_url}.png"
 
         download_and_save_image(more_epic_url, index, image_directory)
 
