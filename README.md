@@ -6,7 +6,7 @@
 
 ### Для cкрипта необходимо:
 
-`$ python -m pip install dotenv==1.0.1`
+`$ python -m pip install python-dotenv==1.0.1`
 
 Версия Python 3.12
 
@@ -151,7 +151,7 @@
 
 ### Для скрипта необходимо:
 
-`$ python -m pip install argparse=1.4.0`
+`$ python -m pip install argparse==1.4.0`
 
 ### Как указать ссылку на файл?
 
