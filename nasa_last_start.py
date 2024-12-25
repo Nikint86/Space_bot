@@ -3,7 +3,6 @@ from pathlib import Path
 import argparse
 
 def download_image(image_url, image_number, image_directory):
-    try:
         response = requests.get(image_url, stream=True)
         response.raise_for_status()
         filename = image_directory / f"space_x_{image_number}.jpg"
@@ -11,8 +10,6 @@ def download_image(image_url, image_number, image_directory):
             for chunk in response.iter_content(chunk_size=8192):
                 file.write(chunk)
         print(f"Изображение {image_number} успешно загружено: {filename}")
-    except requests.exceptions.RequestException as e:
-        print(f"Ошибка при загрузке изображения {image_url}: {e}")
 
 
 if __name__ == '__main__':
