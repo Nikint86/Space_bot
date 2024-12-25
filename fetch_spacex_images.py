@@ -3,15 +3,11 @@ import argparse
 from save_tool import download_and_save_image
 
 
-def open_wikipedia():
-    wikipedia_page = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
-    return wikipedia_page
-
-
 def main(image_directory):
+    wikipedia_page = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
     image_directory.mkdir(parents=True, exist_ok=True)
     filename = image_directory / "hubble.jpeg"
-    download_and_save_image(open_wikipedia(), 0, image_directory)
+    download_and_save_image(wikipedia_page, 0, image_directory)
 
 
 if __name__ == '__main__':
