@@ -14,7 +14,13 @@ def download_image(image_url, image_number, image_directory):
     except requests.exceptions.RequestException as e:
         print(f"Ошибка при загрузке изображения {image_url}: {e}")
 
-def main(image_directory):
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Скачать фото с последнего запуска NASA.")
+    parser.add_argument('directory', type=str, help='Директория для сохранения фото.')
+    args = parser.parse_args()
+    image_directory = Path(args.directory)
+    image_directory.mkdir(parents=True, exist_ok=True)
     spacex_url = "https://api.spacexdata.com/v5/launches/5eb87d42ffd86e000604b384"
     response = requests.get(spacex_url)
     response.raise_for_status()
@@ -24,13 +30,4 @@ def main(image_directory):
     for original_number, original in enumerate(spacex_links, start=1):
         print(f"Загружается изображение {original_number}: {original}")
         download_image(original, original_number, image_directory)
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Скачать фото с последнего запуска NASA.")
-    parser.add_argument('directory', type=str, help='Директория для сохранения фото.')
-    args = parser.parse_args()
-    image_directory = Path(args.directory)
-    image_directory.mkdir(parents=True, exist_ok=True)
-    main(image_directory)
-
 
