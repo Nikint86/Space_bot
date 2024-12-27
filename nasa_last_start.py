@@ -5,7 +5,7 @@ import argparse
 def download_image(image_url, image_number, image_directory):
         response = requests.get(image_url, stream=True)
         response.raise_for_status()
-        filename = image_directory / f"space_x_{image_number}.jpg"
+        filename = image_directory / f"space_nasa_{image_number}.jpg"
         with open(filename, 'wb') as file:
             for chunk in response.iter_content(chunk_size=8192):
                 file.write(chunk)
