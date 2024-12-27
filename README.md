@@ -4,12 +4,6 @@
 
 По умолчанию задержка 3 часа.
 
-### Для cкрипта необходимо:
-
-`$ python -m pip install python-dotenv==1.0.1`
-
-Версия Python 3.12
-
 ### Переменные окружения:
 
 `token = os.getenv("TG_BOT_TOKEN")`
@@ -50,12 +44,6 @@
 
 Скачивает картинки дня с сайта NASA в директорию указанную в `IMAGE_DIRECTORY`
 
-### Для cкрипта необходимо:
-
-`$ python -m pip install requests==2.32.3`
-
-`$ python -m pip install pathlib==1.0.1`
-
 Версия Python 3.12
 
 ### Директория
@@ -85,12 +73,6 @@
 
 Скачивает фотографию с сайта Wikimedia.
 
-### Для cкрипта необходимо:
-
-`$ python -m pip install requests==2.32.3`
-
-`$ python -m pip install pathlib==1.0.1`
-
 Версия Python 3.12
 
 Для работы необходима ваша директория.
@@ -114,12 +96,6 @@
 ## download_epic
 
 Скачивает EPIC фото с сайта NASA.
-
-### Для cкрипта необходимо:
-
-`$ python -m pip install requests==2.32.3`
-
-`$ python -m pip install pathlib==1.0.1`
 
 Версия Python 3.12
 
@@ -148,10 +124,6 @@
 ## main.py
 
 Находит разрешение файла указанного в url.
-
-### Для скрипта необходимо:
-
-`$ python -m pip install argparse==1.4.0`
 
 ### Как указать ссылку на файл?
 
