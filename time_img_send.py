@@ -13,11 +13,11 @@ def main():
     parser = argparse.ArgumentParser(description="Отправить случайную картинку в группу Telegram")
     parser.add_argument('directory', type=str, help='Директория с картинками.')
     args = parser.parse_args()
-    open_directory = os.listdir(args.directory)
+    img_directory = os.listdir(args.directory)
     bot = telegram.Bot(token=token)
     while True:
-        random.shuffle(open_directory)
-        for rand_choice in open_directory:
+        random.shuffle(img_directory)
+        for rand_choice in img_directory:
             document_path = os.path.join(args.directory, rand_choice)
             with open(document_path, "rb") as document_file:
                 bot.send_document(chat_id=chat_id, document=document_file)
