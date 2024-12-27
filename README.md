@@ -6,15 +6,15 @@
 
 ### Переменные окружения:
 
-`token = os.getenv("TG_BOT_TOKEN")`
+`token = os.environ["TG_BOT_TOKEN"]`
 
 Токен зарегистрированного бота
 
-`chat_id = os.getenv("GROUP_TG_CHAT_ID")`
+`chat_id = os.environ["GROUP_TG_CHAT_ID"]`
 
 Чат ID вашей группы или пользователя, которому Вы хотите отправить сообщение.
 
-`TIME = int(os.getenv("TIME_SEND"))`
+`time = int(os.environ["BOT_TIMER"])`
 
 Задержка, с которой бот отправляет сообщение.
 
@@ -26,7 +26,7 @@
 
 Строка с временем в файле **time.env**. Время указывается в секундах.
 
-`TIME = int(os.getenv("TIME_SEND"))`
+`time = int(os.environ["BOT_TIMER"])`
 
 Строка с использованием **time.env** в **time_img_send**.
 
@@ -53,7 +53,7 @@
 
 Для запуска необходим API Ключ, который находится на сайте NASA.
 
-`API_KEY = os.getenv("API_KEY")`
+`api_key = os.environ["NASA_API_KEY"]`
 
 Указать его нужно через переменную окружения.
 
@@ -101,7 +101,7 @@
 
 Для запуска необходим API Ключ, который находится на сайте NASA.
 
-`API_KEY = os.getenv("API_KEY")`
+`api_key = os.environ["NASA_API_KEY"]`
 
 Указать его нужно через переменную окружения.
 
