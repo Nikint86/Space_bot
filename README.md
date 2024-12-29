@@ -69,7 +69,7 @@
 
 ---
 
-## fetch_spacex_images
+## wikimedia_img
 
 Скачивает фотографию с сайта Wikimedia.
 
@@ -85,7 +85,7 @@
 
 ### Как запустить?
 
-`python fetch_spacex_images`
+`python wikimedia_img`
 
 ### Как проверить?
 
