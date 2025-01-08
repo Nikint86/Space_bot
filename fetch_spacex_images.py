@@ -25,8 +25,8 @@ if __name__ == '__main__':
     response = requests.get(spacex_url)
     response.raise_for_status()
 
-    restext = response.json()
-    spacex_links = restext["links"]["flickr"]["original"]
+    response_spacex = response.json()
+    spacex_links = response_spacex["links"]["flickr"]["original"]
 
     for original_number, original in enumerate(spacex_links, start=1):
         print(f"Загружается изображение {original_number}: {original}")
