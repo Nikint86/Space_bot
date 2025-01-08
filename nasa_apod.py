@@ -3,7 +3,7 @@ import requests
 from pathlib import Path
 from dotenv import load_dotenv
 import argparse
-from save_tool import download_and_save_image  # Импорт новой функции
+from save_tool import download_and_save_image
 
 
 def main():
