@@ -1,8 +1,8 @@
 import requests
 
 
-def download_and_save_image(image_url, index, directory):
-        image_response = requests.get(image_url)
+def download_and_save_image (image_url, index, directory):
+        image_response = requests.get(image_url, stream=True)
         image_response.raise_for_status()
         filename = directory / f"saved_image{index + 1}.jpg"
         with open(filename, 'wb') as file:
