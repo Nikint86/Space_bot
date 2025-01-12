@@ -13,7 +13,7 @@ def main():
     time = int(os.getenv("BOT_TIMER", default=10800))
 
     parser = argparse.ArgumentParser(description="Отправить случайную картинку в группу Telegram")
-    parser.add_argument('directory', type=str, help='Директория с картинками.', default='images')
+    parser.add_argument('directory', type=str, nargs='?', help='Директория с картинками.', default='images')
     args = parser.parse_args()
 
     img_directory = os.listdir(args.directory)
