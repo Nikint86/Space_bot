@@ -8,7 +8,7 @@ from save_tool import download_and_save_image
 
 def main():
     parser = argparse.ArgumentParser(description="Скачать NASA фото")
-    parser.add_argument('directory', type=str, help='Директория для сохранения фото.')
+    parser.add_argument('directory', type=str, help='Директория для сохранения фото.', default='images')
     args = parser.parse_args()
 
     image_directory = Path(args.directory)

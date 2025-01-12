@@ -6,7 +6,7 @@ from save_tool import download_and_save_image
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Скачать фото с последнего запуска spacex.")
-    parser.add_argument('directory', type=str, help='Директория для сохранения фото.')
+    parser.add_argument('directory', type=str, help='Директория для сохранения фото.', default='images')
 
     args = parser.parse_args()
     image_directory = Path(args.directory)
