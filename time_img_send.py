@@ -13,17 +13,22 @@ def main():
     time = int(os.getenv("BOT_TIMER", default=10800))
 
     parser = argparse.ArgumentParser(description="Отправить случайную картинку в группу Telegram")
-    parser.add_argument('directory', type=str, help='Директория с картинками.')
+    parser.add_argument('directory', type=str, help='Директория с картинками.', default='images')
     args = parser.parse_args()
 
     img_directory = os.listdir(args.directory)
     bot = telegram.Bot(token=token)
     while True:
-        random.shuffle(img_directory)
-        for rand_choice in img_directory:
-            document_path = os.path.join(args.directory, rand_choice)
-            with open(document_path, "rb") as document_file:
-                bot.send_document(chat_id=chat_id, document=document_file)
+        try:
+            random.shuffle(img_directory)
+            for rand_choice in img_directory:
+                document_path = os.path.join(args.directory, rand_choice)
+                with open(document_path, "rb") as document_file:
+                    bot.send_document(chat_id=chat_id, document=document_file)
+                sleep(time)
+                break
+        except ConnectionError:
+            sleep(5)
             sleep(time)
 
 
