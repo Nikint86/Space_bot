@@ -12,7 +12,7 @@ if __name__ == '__main__':
     image_directory = Path(args.directory)
     image_directory.mkdir(parents=True, exist_ok=True)
 
-    spacex_url = "https://api.spacexdata.com/v5/launches/5eb87d42ffd86e000604b384"
+    spacex_url = "https://api.spacexdata.com/v5/launches/latest"
 
     response = requests.get(spacex_url)
     response.raise_for_status()
