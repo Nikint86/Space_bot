@@ -28,9 +28,13 @@ def main():
                 sleep(time)
                 break
         except ConnectionError:
+            print("Ошибка подключения. Повторная попытка через 5 секунд.")
             sleep(5)
             sleep(time)
-
+        except telegram.error.NetworkError:
+            print("Ошибка сети. Повторная попытка через 5 секунд.")
+            sleep(5)
+            sleep(time)
 
 if __name__ == '__main__':
     main()
