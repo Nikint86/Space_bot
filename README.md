@@ -6,7 +6,9 @@
 
 Введите в Bash команду:
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 ---
 
@@ -42,7 +44,9 @@
 
 ### Как запустить?
 
-```python time_img_send```
+```
+python time_img_send
+```
 
 ### Как проверить?
 
@@ -75,7 +79,9 @@
 
 ### Как запустить?
 
-```python nasa_apod```
+```
+python nasa_apod
+```
 
 ### Как проверить?
 
@@ -101,7 +107,9 @@
 
 ### Как запустить?
 
-```python wikimedia_img```
+```
+python wikimedia_img
+```
 
 ### Как проверить?
 
@@ -131,7 +139,9 @@
 
 ### Как запустить?
 
-```python download_epic```
+```
+python download_epic
+```
 
 ### Как проверить?
 
