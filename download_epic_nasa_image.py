@@ -8,7 +8,11 @@ from save_tool import download_and_save_image
 
 def main():
     parser = argparse.ArgumentParser(description="Скачать EPIC с сайта NASA")
-    parser.add_argument('directory', type=str, nargs='?', help='Директория для сохранения EPIC файлов', default='images')
+    parser.add_argument('directory',
+                        type=str,
+                        nargs='?',
+                        help='Директория для сохранения EPIC файлов',
+                        default='images')
     args = parser.parse_args()
 
     image_directory = Path(args.directory)
@@ -31,5 +35,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
