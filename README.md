@@ -36,6 +36,13 @@ pip install -r requirements.txt
 
 `TG_BOT_TOKEN, GROUP_TG_CHAT_ID, BOT_TIMER` Прописываются в файле .env
 
+Пример:
+`TG_BOT_TOKEN` = "ваш токен"
+
+`GROUP_TG_CHAT_ID` = "чат id группы"
+
+`BOT_TIMER` = "время отправки сообщения в секундах"
+
 ### Как поменять задержку?
 
 Задержку можно изменить при помощи переменной окружения `BOT_TIMER`
@@ -136,6 +143,8 @@ python wikimedia_img
 По умолчанию images.
 
 `NASA_API_KEY` указывается в файле .env
+
+NASA_API_KEY = "ваш API ключ"
 
 ### Как запустить?
 
