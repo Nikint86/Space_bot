@@ -32,7 +32,7 @@ def main():
         image_nasa_url = item.get("url")
         if image_nasa_url:
             print(f"Загружается изображение: {image_nasa_url}")
-            download_and_save_image(image_nasa_url, index, image_directory)
+            download_and_save_image(image_nasa_url, image_directory)
 
 
 if __name__ == '__main__':

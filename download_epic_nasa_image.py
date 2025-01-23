@@ -24,13 +24,13 @@ def main():
 
     url_response = requests.get(url, params=payload)
     url_response.raise_for_status()
-    url_open = urls_response.json()
+    url_open = url_response.json()
 
     for index, parsed in enumerate(url_open, start=1):
         new_url = parsed["image"]
         more_epic_url = f"https://api.nasa.gov/EPIC/archive/natural/2024/12/08/png/{new_url}.png"
 
-        download_and_save_image(more_epic_url, index, image_directory)
+        download_and_save_image(more_epic_url, image_directory)
 
 
 if __name__ == '__main__':

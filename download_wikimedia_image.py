@@ -16,4 +16,4 @@ if __name__ == '__main__':
 
     image_directory.mkdir(parents=True, exist_ok=True)
     filename = image_directory / "hubble.jpeg"
-    download_and_save_image(wikimedia_img_link, 0, image_directory)
+    download_and_save_image(wikimedia_img_link, image_directory)

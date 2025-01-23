@@ -25,5 +25,5 @@ if __name__ == '__main__':
     spacex_links = response_spacex["links"]["flickr"]["original"]
 
     for original_number, original in enumerate(spacex_links, start=1):
-        print(f"Загружается изображение {original_number}: {original}")
-        download_and_save_image(original, original_number, image_directory)
+        print(f"Загружается изображение: {original}")
+        download_and_save_image(original, image_directory)
