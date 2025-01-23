@@ -20,13 +20,13 @@ def main():
     load_dotenv()
     api_key = os.environ["NASA_API_KEY"]
     payload = {"api_key": api_key}
-    urls = "https://api.nasa.gov/EPIC/api/natural/images"
+    url = "https://api.nasa.gov/EPIC/api/natural/images"
 
-    urls_response = requests.get(urls, params=payload)
-    urls_response.raise_for_status()
-    urls_open = urls_response.json()
+    url_response = requests.get(url, params=payload)
+    url_response.raise_for_status()
+    url_open = urls_response.json()
 
-    for index, parsed in enumerate(urls_open, start=1):
+    for index, parsed in enumerate(url_open, start=1):
         new_url = parsed["image"]
         more_epic_url = f"https://api.nasa.gov/EPIC/archive/natural/2024/12/08/png/{new_url}.png"
 
