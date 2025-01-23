@@ -23,11 +23,11 @@ pip install -r requirements.txt
 `TG_BOT_TOKEN, GROUP_TG_CHAT_ID, BOT_TIMER` Прописываются в файле .env
 
 Пример:
-`TG_BOT_TOKEN` = "ваш токен"
+`TG_BOT_TOKEN`="ваш токен"
 
-`GROUP_TG_CHAT_ID` = "чат id группы"
+`GROUP_TG_CHAT_ID`="чат id группы"
 
-`BOT_TIMER` = "время отправки сообщения в секундах"
+`BOT_TIMER`="время отправки сообщения в секундах"
 
 ### Как поменять задержку?
 
@@ -63,7 +63,7 @@ python time_img_send
 
 Указать его нужно через переменную окружения.
 
-`API_KEY = "Ваш API Ключ с сайта NASA"`
+`NASA_API_KEY="Ваш API Ключ с сайта NASA"`
 
 Внести его необходимо через файл .env который необходимо создать.
 
@@ -122,7 +122,7 @@ python wikimedia_img
 
 `NASA_API_KEY` указывается в файле .env
 
-NASA_API_KEY = "ваш API ключ"
+`NASA_API_KEY`="ваш API ключ"
 
 ### Как запустить?
 
